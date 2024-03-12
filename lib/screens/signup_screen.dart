@@ -1,27 +1,30 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:instagram_flutter/utils/colors.dart';
 import 'package:instagram_flutter/widget/text_field_input.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<SignUpScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _bioController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
 
   @override
   void dispose() {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _bioController.dispose();
+    _usernameController.dispose();
   }
 
   @override
@@ -40,6 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 flex: 2,
                 child: Container(),
               ),
+              // svg image
               SvgPicture.asset(
                 'assets/ic_instagram.svg',
                 color: primaryColor,
@@ -48,6 +52,37 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 64,
               ),
+              // circular widget to accept and show our selected file
+              Stack(
+                children: [
+                  const CircleAvatar(
+                    radius: 64,
+                    backgroundImage: NetworkImage(
+                        'https://images.unsplash.com/photo-1710185220451-53c7a9b00a78?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                  ),
+                  Positioned(
+                    bottom: -10,
+                    left: 80,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.add_a_photo),
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              // Text field input for username
+              TextFieldInput(
+                textEditingController: _usernameController,
+                hintText: 'username',
+                textInputType: TextInputType.text,
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              // Text field input for emai id
               TextFieldInput(
                 textEditingController: _emailController,
                 hintText: 'emailaddress@xyz.com',
@@ -56,6 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 24,
               ),
+              // Text field input for password
               TextFieldInput(
                 textEditingController: _passwordController,
                 hintText: 'Password@123',
@@ -65,6 +101,16 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 24,
               ),
+              // Text field input for bio
+              TextFieldInput(
+                textEditingController: _bioController,
+                hintText: 'So far so good.',
+                textInputType: TextInputType.text,
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              // Sign Up button
               InkWell(
                 child: Container(
                   width: double.infinity,
@@ -78,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     color: blueColor,
                   ),
-                  child: const Text('Log in'),
+                  child: const Text('Sign up'),
                 ),
               ),
               const SizedBox(
@@ -88,19 +134,20 @@ class _LoginScreenState extends State<LoginScreen> {
                 flex: 2,
                 child: Container(),
               ),
+              // row for login
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: const Text('Don\'t have an account?'),
+                    child: const Text('Already have an account?'),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(
-                        'Sign up',
+                        'Log in',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
