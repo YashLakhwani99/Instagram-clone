@@ -45,4 +45,23 @@ class AuthMehtods {
     }
     return res;
   }
+
+  Future<String> logInUser({
+    required String email,
+    required String password,
+  }) async {
+    String res = "Something happened";
+    try {
+      if (email.isNotEmpty || password.isNotEmpty) {
+        await _auth.signInWithEmailAndPassword(
+            email: email, password: password);
+        res = "success";
+      } else {
+        res = "Please enter all the fields";
+      }
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
 }
