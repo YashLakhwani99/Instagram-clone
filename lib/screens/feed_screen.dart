@@ -22,7 +22,8 @@ class FeedScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {}, icon: const Icon(Icons.messenger_outline)),
+              onPressed: () {},
+              icon: const Icon(Icons.messenger_outline)),
         ],
       ),
       body: StreamBuilder(
@@ -36,9 +37,8 @@ class FeedScreen extends StatelessWidget {
           }
           return ListView.builder(
             itemCount: snapshot.data!.docs.length,
-            itemBuilder: (context, index) => PostCard(
-              snap : snapshot.data!.docs[index].data()
-            ),
+            itemBuilder: (context, index) =>
+                PostCard(snap: snapshot.data!.docs[index].data()),
           );
         },
       ),
