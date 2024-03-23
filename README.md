@@ -15,5 +15,5 @@ Working Instagram Clone (Frontend + Backend) created with Flutter and Firebase.
 - Sign Out
 
 ## Screenshots
-![Simulator Screenshot - Yash's iPhone - 2024-03-23 at 20 01 07](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/348dc027-b01f-4608-b776-bf9b7ebde2f5)
+!!!![Simulator Screenshot - Yash's iPhone - 2024-03-23 at 20 01 07](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/348dc027-b01f-4608-b776-bf9b7ebde2f5)
 Log in page
