@@ -1,4 +1,4 @@
-# instagram clone using flutter
+# Instagram clone using flutter
 
 Working Instagram Clone (Frontend + Backend) created with Flutter and Firebase.
 
