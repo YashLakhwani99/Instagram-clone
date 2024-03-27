@@ -13,7 +13,7 @@ Working Instagram Clone (Frontend + Backend) created with Flutter and Firebase.
 - Display User Posts, Followers & Following
 - EVERYTHING REAL TIME
 - Sign Out
-- <img align="center" src="[https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/ae224302-9bcf-4a14-bbb2-f9c4d623206f)" alt="misnomerrr" height="30" width="40" />
+- <img align="center" src="[https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/ae224302-9bcf-4a14-bbb2-f9c4d623206f)" alt="misnomerrr" height="200" width="80" />
 ![Simulator Screenshot - Yash's iPhone - 2024-03-27 at 17 38 15](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/ae224302-9bcf-4a14-bbb2-f9c4d623206f)
 ![Simulator Screenshot - Yash's iPhone - 2024-03-27 at 17 38 09](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/959303f7-904d-4b70-87f5-0320de433e24)
 ![Simulator Screenshot - Yash's iPhone - 2024-03-27 at 17 37 16](https://github.com/YashLakhwani99/Instagram-clone/assets/110691495/3204f70c-962b-4670-ab13-a2cab436da87)
